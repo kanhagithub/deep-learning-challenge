@@ -22,49 +22,41 @@ I preprocessed the data by:
 The resulting data included 44 features. The target variable (y) was IS_SUCCESSFUL. The data was split into training and test subsets.
 
 COMPILING, TRAINING, AND EVALUATING THE MODEL<br>
-The model was required to achieve a target predictive accuracy higher than 75%. I made three official attempts using machine learning and neural networks. They all resulted in the same accuracy rate – right around 72%, so a little short of the required target accuracy.
+The model was required to achieve a target predictive accuracy higher than 72%. I made three official attempts using machine learning and neural networks. They all resulted in the same accuracy rate – right around 72%, so a little short of the required target accuracy.
 
 Results from each model attempt are detailed below:
 
 ATTEMPT 1<br>
-The first attempt (Models/AlphabetSoupCharity1.h5) resulted in an <b>accuracy score of 72.8%. This was the highest accuracy score of the three models.</b> This means that 72.8% of the model’s predicted values align with the dataset’s true values.
+The first attempt resulted in an <b>accuracy score of 73.3%. This was the highest accuracy score of the three models.</b> This means that 72.8% of the model’s predicted values align with the dataset’s true values.
 
 The hyperparameters used were:
 * layers = 2
-  * layer1 = 9 neurons : activation function = ‘relu’
-  * layer2 = 18 neurons : activation function = ‘relu'
+  * layer1 = 8 neurons : activation function = ‘relu’
+  * layer2 = 5 neurons : activation function = ‘relu'
 * epochs = 100
 
-![Model 1 Accuracy Plot](Resources/Model1_accuracy.png)
 
 ATTEMPT 2<br>
-For my second attempt (Models/AlphabetSoupCharity2.h5) I added another layer. This attempt resulted in an <b>accuracy score of 72.6%.</b> This means that 72.6% of the model’s predicted values align with the dataset’s true values.
+For my second attempt resulted in an <b>accuracy score of 73.2%.</b> This means that 73.2% of the model’s predicted values align with the dataset’s true values.
 
 The hyperparameters used were:
-* layers = 3
-  * layer1 = 9 neurons : activation function = ‘relu’
-  * layer2 = 18 neurons : activation function = ‘relu’
-  * layer3 = 27 neurons : activation function = ‘relu’
+* layers = 2
+  * layer1 = 10 neurons : activation function = ‘relu’
+  * layer2 = 10 neurons : activation function = ‘relu’
+  
 * epochs = 100
 
-![Model 2 Accuracy Plot](Resources/Model2_accuracy.png)
 
 ATTEMPT 3<br>
-For my third and final attempt (Resources/AlphabetSoupCharity3.h5) I kept the third layer and changed the activation function for layers 2 and 3. This attempt resulted in an <b>accuracy score of 72.7%.</b> This means that 72.7% of the model’s predicted values align with the dataset’s true values.
+For my third and final attempt resulted in an <b>accuracy score of 46.7%.</b> This means that 46.7% of the model’s predicted values align with the dataset’s true values.
 
 The hyperparameters used were:
-* layers = 3
-  * layer1 = 9 neurons : activation function = ‘relu’
-  * layer2 = 18 neurons : activation function = ‘tanh’
-  * layer3 = 27 neurons : activation function = ‘tanh’
+* layers = 2
+  * layer1 = 20 neurons : activation function = ‘relu’
+  * layer2 = 20 neurons : activation function = ‘sigmoid’
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 * epochs = 100
 
-![Model 3 Accuracy Plot](Resources/Model3_accuracy.png)
-
-
 ## Summary
-In the three attempts I made, the model was unable to achieve a target predictive accuracy higher than 72.8%. Hypertuning resulted in virtually no improvement. I would consider using another classification model to see if it is better at predicting whether applicants will be successful if funded by Alphabet Soup.
+In the three attempts I made, first two model was able to achieve a target predictive accuracy higher than 72%. Using a model with greater correlation between input and output would likely result in higher prediction accuracy. This could be achieved by doing additional data cleanup up front, as well as by using a model with different activation functions and iterating until higher accuracy is reached.
 
-
-## My Code
-* VSCode: CharityFundingPredictor.ipynb
